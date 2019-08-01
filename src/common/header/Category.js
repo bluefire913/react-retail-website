@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Category = ({categories})=>{
 
+class Category extends Component 
+{
+	render(){
 return (
      <div>
      <ul class="cateories">
-     {categories.subcategory.map((category)=>(
+     {this.props.categories.subcategory.map((category)=>(
                
 		<li class="category" name="{category.id}">
 			{category.name}
 		</li>
 
      	))}
-</ul>
-</div>
+	</ul>
+	</div>
 	)
+	}
+}
 
-};
+export default Category;
