@@ -10,16 +10,17 @@ class Header extends Component {
   render() {
 
   	return (
+
     <div>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-             <h2>Retail Online</h2>
+             <a href="/"><h2>Retail Online</h2></a>
            </div>
            
-           <div class="category">
+           <div className="category">
        
          
-           <Categorydata/>
+           <Categorydata category={this.props.categoryCode}/>
        </div>
 </div>
     );

@@ -9,7 +9,10 @@ export default class Categorydata extends Component
 	}
 
 	componentWillMount (){
-        fetch("https://localhost:9002/mafcommercewebservices/v2/mafuae/en/catalogs/mafuaeProductCatalog/Online/categories/NF8000000?access_token=efc493e8-79e1-437c-b99c-06c171d96630&app_id=Android"
+		
+		const url= 'https://localhost:9002/mafcommercewebservices/v2/mafuae/en/catalogs/mafuaeProductCatalog/Online/categories/'+this.props.category+'?access_token=2b351ac4-6c3a-474f-82de-91ca5f623a8e&app_id=Android';
+        console.log(url);
+        fetch("https://localhost:9002/mafcommercewebservices/v2/mafuae/en/catalogs/mafuaeProductCatalog/Online/categories/NF8000000?access_token=2b351ac4-6c3a-474f-82de-91ca5f623a8e&app_id=Android"
 
         	, {
    mode: 'cors',

@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import Header from '../common/header/header.js'
+import ProductData from '../common/header/ProductData.js'
 
-export default function ProductListPage() {
+export default class ProductListPage extends React.Component  {
+
+  render(){
   return (
     <div className="container">
     <div className="App">
-        <Header/>
+     console.log("this.props.match");
+    console.log(this.props.match);
+        <Header categoryCode={this.props.match.params.id}/>
         Product list page 
-        <p className="App-intro">
-        </p>
+       
+        <ProductData  />
+      
       </div>
     </div>
-  )
+  )}
 }
